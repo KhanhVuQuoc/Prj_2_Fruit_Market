@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.collections.*?>
+<?import javafx.scene.control.*?>
+
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.layout.*?>
+
+
+
+<AnchorPane id="AnchorPane" prefHeight="232.0" prefWidth="387.0" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/8" fx:controller="com.mycompany.fruit.market.AddOrUpdateFruitController">
+   <children>
+      <Label layoutX="227.0" layoutY="36.0" text="SAVE USER" />
+      <Label layoutX="25.0" layoutY="116.0" text="Username: " />
+      <TextField id="textFieldFruitname" fx:id="textFieldFruitname" layoutX="211.0" layoutY="106.0" />
+      <Label layoutX="25.0" layoutY="207.0" text="Role: " />
+      <ComboBox id="comboBoxPrice" fx:id="comboBoxPrice" layoutX="211.0" layoutY="197.0" prefWidth="150.0">
+          <items>
+              <FXCollections fx:factory="observableArrayList">
+                  <String fx:value="admin"></String>
+                  <String fx:value="user"></String>  
+  
+              </FXCollections>
+          </items>
+      </ComboBox>
+      <Button fx:id="btnSave" layoutX="184.0" layoutY="296.0" mnemonicParsing="false" text="Save" />
+      <Button fx:id="btnCancel" layoutX="320.0" layoutY="296.0" mnemonicParsing="false" text="Cancel" />
+   </children>
+</AnchorPane>

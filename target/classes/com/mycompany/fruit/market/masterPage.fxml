@@ -1,0 +1,128 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Menu?>
+<?import javafx.scene.control.MenuBar?>
+<?import javafx.scene.control.MenuItem?>
+<?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.mycompany.fruit.market.Admin">
+   <children>
+      <VBox layoutY="-2.0" prefHeight="405.0" prefWidth="212.0" style="-fx-background-color: #E4d4e6; -fx-border-radius: 30px;" AnchorPane.bottomAnchor="0.0" AnchorPane.topAnchor="0.0">
+         <children>
+            <Pane prefHeight="116.0" prefWidth="212.0" style="-fx-background-color: #E4d4e6;">
+               <children>
+                  <ImageView fitHeight="38.0" fitWidth="42.0" layoutX="48.0" layoutY="40.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../../../../values/img/admin.png" />
+                     </image></ImageView>
+                  <Label layoutX="106.0" layoutY="41.0" text="Admin" textFill="#3c3939">
+                     <font>
+                        <Font name="System Bold" size="24.0" />
+                     </font>
+                  </Label>
+               </children>
+            </Pane>
+            <Button fx:id="btnUsers" alignment="BASELINE_LEFT" mnemonicParsing="false" onAction="#handleClicks" prefHeight="45.0" prefWidth="213.0" style="-fx-background-color: #E4d4e6;" text="Users" textFill="#4d4d4d">
+               <opaqueInsets>
+                  <Insets />
+               </opaqueInsets>
+               <padding>
+                  <Insets left="50.0" />
+               </padding>
+               <graphic>
+                  <ImageView fitHeight="28.0" fitWidth="27.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../../../../values/img/user.png" />
+                     </image></ImageView>
+               </graphic>
+               <font>
+                  <Font name="System Bold" size="12.0" />
+               </font>
+            </Button>
+            <Button fx:id="btnFruits" alignment="BASELINE_LEFT" mnemonicParsing="false" onAction="#handleClicks" prefHeight="45.0" prefWidth="212.0" style="-fx-background-color: #E4d4e6;" text="Products" textFill="#3c3939">
+               <graphic>
+                  <ImageView fitHeight="28.0" fitWidth="27.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../../../../values/img/ic_cart.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+               <opaqueInsets>
+                  <Insets />
+               </opaqueInsets>
+               <padding>
+                  <Insets left="50.0" />
+               </padding>
+               <VBox.margin>
+                  <Insets top="10.0" />
+               </VBox.margin>
+               <font>
+                  <Font name="System Bold" size="12.0" />
+               </font>
+            </Button>
+            <Button fx:id="btnProfit" alignment="BASELINE_LEFT" mnemonicParsing="false" onAction="#handleClicks" prefHeight="45.0" prefWidth="212.0" style="-fx-background-color: #E4d4e6;" text="Profit" textFill="#3c3939">
+               <graphic>
+                  <ImageView fitHeight="28.0" fitWidth="27.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../../../../values/img/money.png" />
+                     </image></ImageView>
+               </graphic>
+               <opaqueInsets>
+                  <Insets />
+               </opaqueInsets>
+               <padding>
+                  <Insets left="50.0" />
+               </padding>
+               <VBox.margin>
+                  <Insets top="10.0" />
+               </VBox.margin>
+               <font>
+                  <Font name="System Bold" size="12.0" />
+               </font>
+            </Button>
+         </children>
+      </VBox>
+      <MenuBar layoutX="463.0" prefHeight="32.0" prefWidth="154.0" style="-fx-background-color: #E4d4e6;" AnchorPane.rightAnchor="0.0">
+        <menus>
+          <Menu mnemonicParsing="false" text="View">
+            <items>
+              <MenuItem fx:id="imarket" mnemonicParsing="false" onAction="#handleMarketMenuItem" text="Market" />
+            </items>
+          </Menu>
+          <Menu mnemonicParsing="false" text="Action">
+            <items>
+              <MenuItem mnemonicParsing="false" text="Restock" />
+            </items>
+          </Menu>
+        </menus>
+         <cursor>
+            <Cursor fx:constant="DEFAULT" />
+         </cursor>
+      </MenuBar>
+      <Pane layoutX="212.0" layoutY="44.0" prefHeight="90.0" prefWidth="388.0" style="-fx-background-color: #D4E6E3;" AnchorPane.leftAnchor="212.0" AnchorPane.rightAnchor="0.0">
+         <children>
+            <Label fx:id="lbstats" layoutX="20.0" layoutY="28.0" text="Users" textFill="#3c3939">
+               <font>
+                  <Font size="24.0" />
+               </font>
+            </Label>
+         </children>
+      </Pane>
+      <ScrollPane layoutX="212.0" layoutY="147.0" prefHeight="253.0" prefWidth="388.0" AnchorPane.bottomAnchor="5.0" AnchorPane.leftAnchor="212.0" AnchorPane.rightAnchor="5.0" AnchorPane.topAnchor="142.0">
+         <content>
+            <BorderPane fx:id="Adminpage" prefHeight="232.0" prefWidth="387.0" />
+         </content>
+      </ScrollPane>
+   </children>
+</AnchorPane>
