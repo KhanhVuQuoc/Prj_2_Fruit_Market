@@ -17,7 +17,7 @@ import java.sql.Statement;
 public class Connect {
     public static Connection createConnection() throws SQLException{
         String rootFolder = System.getProperty("user.dir");
-        String databaseLocation = Paths.get(rootFolder, "FruitsMarket.db").toString();
+        String databaseLocation = Paths.get(rootFolder, "Fruit_Market_DB.db").toString();
         String connectionString = "jdbc:sqlite:"+databaseLocation;
         var connection = DriverManager.getConnection(connectionString);
         return connection;
